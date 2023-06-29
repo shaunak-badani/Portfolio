@@ -19,7 +19,8 @@ from django.urls import include
 from . import views
 
 urlpatterns = [
-    path('', views.home),
+    path('', views.home, name = 'home'),
+    path('work/', views.work, name = 'work'),
     path('admin/', admin.site.urls),
-    path('barebonesbackprop/', include("barebonesbackprop.urls")),
+    path('barebonesbackprop/', include("barebonesbackprop.urls"), name = 'CustomML'),
 ]
